@@ -1,0 +1,35 @@
+.CartPages {
+    .pageTitle {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .product-grid-header {
+        width:70%;
+        margin-left: 14%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 0.3fr;
+        background-color: #f4f4f4;
+        padding: 8px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+
+        .header-name {
+            grid-column: 1;
+        }
+
+        .header-quantity {
+            grid-column: 2;
+        }
+
+        .header-price {
+            grid-column: 3;
+        }
+    }
+
+    .product {
+        display: flex;
+        flex-direction: column;
+    }
+}

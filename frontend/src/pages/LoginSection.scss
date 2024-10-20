@@ -1,0 +1,135 @@
+.loginSection{
+  display: flex;
+  flex-direction: column; /* Đặt hướng cột để phần tử con nằm từ trên xuống dưới */
+  justify-content: space-between; /* Phân phối không gian giữa logo và nút */
+  align-items: center; /* Căn giữa các phần tử con theo chiều ngang */
+  width: 300px; /* Kích thước của khung hình vuông */
+  height: 300px; /* Kích thước của khung hình vuông */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng tới kích thước tổng */
+
+  .logoEnterprise {
+    width: 100%; /* Đảm bảo logo chiếm toàn bộ chiều rộng của hộp */
+    text-align: center; /* Căn giữa logo */
+    // display: flex;
+    top:0;
+    h2 {
+      margin: 0; /* Loại bỏ margin mặc định của h2 */
+      font-size: 2rem; /* Điều chỉnh kích thước chữ */
+    }
+    img{
+      height: 185px;
+    }
+  }
+
+  .btn-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top : 110%;
+  }
+
+  .btn {
+    width: 50%; /* Đặt chiều rộng nhỏ hơn để nút nằm ngang */
+    font-size: 0.9rem;
+    border-radius: 16px; /* Đặt border-radius cho nút */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin: 0 4px; /* Tạo một khoảng cách nhỏ giữa hai nút */
+
+    &:hover {
+      transform: translateY(-3px);
+      border-color: #fff;
+    }
+  }
+
+  .btn-login {
+    background-color: #ff5722; /* Màu nền cho nút đăng nhập */
+    color: #fff;
+    padding: 10px;
+
+    &:hover {
+      background-color: #e64a19; /* Màu nền khi rê chuột */
+    }
+  }
+
+  .btn-signup {
+    background-color: #4aa04e; /* Màu nền cho nút đăng ký */
+    color: #fff;
+    padding: 10px;
+
+    &:hover {
+      background-color: #388e3c; /* Màu nền khi rê chuột */
+    }
+  }
+  .loginForm {
+    display: flex;
+    flex-direction: column; /* Đặt các phần tử con theo chiều dọc */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+    
+    .header {
+      text-align: center; /* Căn giữa tiêu đề */
+      
+      h2 {
+        margin: 0; /* Loại bỏ margin mặc định của h2 */
+        font-size: 1.5rem; /* Điều chỉnh kích thước chữ */
+      }
+    }
+
+    .email,
+    .password {
+      display: flex;
+      flex-direction: column; /* Đặt label và input theo chiều dọc */
+      gap: 5px; /* Khoảng cách giữa label và input */
+      
+      label {
+        display: flex;
+        font-size: 0.9rem; /* Điều chỉnh kích thước chữ của label */
+        justify-content: left;
+        margin-left: 5px;
+      }
+      
+      input {
+        padding: 10px; /* Padding bên trong input */
+        border: 1px solid #ccc; /* Viền của input */
+        border-radius: 8px; /* Bo góc cho input */
+        font-size: 1rem; /* Kích thước chữ trong input */
+        width: 100%; /* Đảm bảo input chiếm toàn bộ chiều rộng của phần tử chứa */
+        box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng tới kích thước tổng */
+        transition: border-color 0.3s ease; /* Hiệu ứng chuyển đổi khi hover vào input */
+        
+        &:focus {
+          border-color: #ff5722; /* Màu viền khi input được chọn */
+          outline: none; /* Loại bỏ outline mặc định */
+        }
+      }
+    }
+
+    .btn-login {
+      width: 100%; /* Đảm bảo nút chiếm toàn bộ chiều rộng của phần tử chứa */
+      margin-top: 10px; /* Khoảng cách phía trên của nút */
+    }
+
+    .sign-up-link {
+      text-align: center; /* Căn giữa phần liên kết đăng ký */
+      
+      b {
+        display: block; /* Hiển thị b như một phần tử khối */
+        padding:10px; /* Khoảng cách phía dưới của b */
+      }
+
+      .btn-signup {
+        margin-top: 10px; /* Khoảng cách phía trên của nút đăng ký */
+        background-color: #2196f3; /* Màu nền cho nút đăng ký */
+        color: #fff;
+
+        &:hover {
+          background-color: #1976d2; /* Màu nền khi rê chuột */
+        }
+      }
+    }
+  }
+}

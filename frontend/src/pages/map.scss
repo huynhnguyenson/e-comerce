@@ -1,0 +1,71 @@
+/* map.scss */
+
+.map {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+  
+  .left {
+    border: 5px solid rgb(236, 166, 15);
+    width: 10%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .middle {
+    display: flex;
+    width: 80%;
+    height: 90%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+    }
+
+    #map {
+      height: 100%;
+      width: 100%;
+      border: 2px solid #120f0f;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+  }
+
+  .right {
+    border: 5px solid rgba(11, 229, 30, 0.651);
+    width: 10%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .leaflet-marker-icon {
+    border-radius: 50%;
+  }
+
+  .custom-popup-style .leaflet-popup-content-wrapper {
+    background: rgb(50, 40, 5);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .custom-popup-style .leaflet-popup-tip {
+    background: rgb(50, 40, 5);
+  }
+
+  /* Tùy chỉnh thanh tìm kiếm */
+  .leaflet-control-geosearch {
+    position: absolute !important; /* Đảm bảo vị trí là tuyệt đối so với map */
+    top: 10px; /* Điều chỉnh khoảng cách từ trên xuống */
+    right: 0; /* Điều chỉnh khoảng cách từ phải vào */
+    z-index: 1000; /* Đảm bảo thanh tìm kiếm nằm trên cùng */
+    width: 300px; /* Chiều rộng của thanh tìm kiếm */
+    
+  }
+}

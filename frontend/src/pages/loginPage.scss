@@ -1,0 +1,123 @@
+.LoginPage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title { 
+            position: sticky; 
+            color: black;
+            font-size: 37px;
+            justify-content: center; /* Căn giữa theo chiều ngang */
+        }
+
+        .LoginZone {
+            display: flex;
+            gap: 20px;
+            margin-top: 13%;
+
+            .LoginBox {
+                position: absolute;
+                right: 25%;
+                top: 26%;
+            }
+            .PhoneDisplay {
+            position: absolute;
+            display: flex;
+            top: 12%;
+            left: 22%;
+        .backgroundPhone {
+             position: relative; // Đảm bảo khung điện thoại hiển thị phía trên ảnh trek
+             z-index: 2;
+             img {
+                position: absolute;
+                height: 500px;
+                left:2%;
+                object-fit: cover;
+                    }
+                }
+    .ShoeVideos {
+        position: relative; // Đảm bảo rằng video nằm bên dưới khung điện thoại
+        z-index: 1;
+        width: 235px; // Điều chỉnh chiều rộng cho phù hợp với khung điện thoại
+        height: 490px; // Điều chỉnh chiều cao cho phù hợp với khung điện thoại
+        overflow: hidden; // Đảm bảo video không bị tràn ra ngoài
+        border-radius: 30px;
+        video {
+            position: absolute; // Đặt video ở vị trí tuyệt đối
+            top: 1.8%; // Đặt video ở phần trên cùng
+            left: 7.5%; // Đặt video ở phần bên trái
+            width: 100%; // Đặt chiều rộng của video bằng 100% của .ShoeVideos
+            height: 100%; // Tự động điều chỉnh chiều cao
+            object-fit: cover; // Giữ nguyên tỷ lệ khung hình
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+        }
+
+        .founder {
+            position: absolute;
+            display: flex;
+            color: rgb(1, 1, 1);
+            padding-bottom: 10px;
+            font-weight: bold;
+            bottom: 0;
+        }
+    }
+}
+
+// Media query cho màn hình di động
+@media (max-width: 768px) {
+    .LoginPage {
+        height: auto; // Có thể thay đổi chiều cao nếu cần
+
+        .content {
+            margin-top: 10%; // Giảm lề trên để nội dung gần hơn với đỉnh màn hình
+
+            .title {
+                font-size: 28px; // Giảm kích thước chữ cho tiêu đề
+            }
+
+            .LoginZone {
+                flex-direction: column; // Sắp xếp theo cột cho màn hình nhỏ
+                align-items: center; // Căn giữa nội dung
+                margin-top: 5%; // Điều chỉnh khoảng cách
+
+                .LoginBox {
+                    position: relative; // Để thay đổi vị trí cho phù hợp
+                    right: auto; // Đặt lại vị trí
+                    top: auto; // Đặt lại vị trí
+                }
+
+                .imageBackground {
+                    position: relative; // Đặt lại vị trí cho phù hợp
+                    top: auto; // Đặt lại vị trí
+                    left: auto; // Đặt lại vị trí
+                }
+
+                .ShoeImages img {
+                    width: 180px; // Điều chỉnh kích thước cho màn hình nhỏ
+                    height: auto; // Giữ tỷ lệ khung hình
+                }
+
+                .backgroundPhone img {
+                    height: 300px; // Điều chỉnh chiều cao cho khung điện thoại
+                }
+            }
+        }
+    }
+}

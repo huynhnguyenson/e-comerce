@@ -1,0 +1,13 @@
+/* src/App.scss */
+
+html, body {
+  overflow: hidden; /* Ẩn thanh cuộn toàn bộ trang */
+  height: 100%; /* Đảm bảo chiều cao 100% cho html và body */
+  margin: 0; /* Xóa margin để tránh tạo khoảng trống */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Đảm bảo chiều cao tối thiểu của ứng dụng là 100% chiều cao của viewport */
+}

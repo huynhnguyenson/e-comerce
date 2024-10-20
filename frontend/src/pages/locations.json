@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Đại học Cần Thơ",
+    "description": "Trường Đại học hàng đầu tại Đồng bằng Sông Cửu Long.",
+    "coordinates": [10.029933, 105.770664]
+  },
+  {
+    "name": "Nhà thờ Đức Bà Sài Gòn",
+    "description": "Nhà thờ nổi tiếng tại Thành phố Hồ Chí Minh, một biểu tượng lịch sử.",
+    "coordinates": [10.779783, 106.699662]
+  },
+  {
+    "name": "Bến Bạch Đằng",
+    "description": "Khu vực ven sông với nhiều nhà hàng, quán cà phê và bến tàu tại TP.HCM.",
+    "coordinates": [10.773469, 106.704875]
+  },
+  {
+    "name": "Phố Bùi Viện, Quận 1",
+    "description": "Khu phố tây sôi động, nổi tiếng với các quán bar và nhà hàng.",
+    "coordinates": [10.768167, 106.692002]
+  },
+  {
+    "name": "Hồ Hoàn Kiếm, Hà Nội",
+    "description": "Hồ nước nổi tiếng với tháp Rùa, nằm giữa lòng thủ đô Hà Nội.",
+    "coordinates": [21.028511, 105.854167]
+  },
+  {
+    "name": "Lăng Chủ tịch Hồ Chí Minh",
+    "description": "Lăng nơi an nghỉ của Chủ tịch Hồ Chí Minh, tại Quảng trường Ba Đình, Hà Nội.",
+    "coordinates": [21.037236, 105.834454]
+  },
+  {
+    "name": "Vịnh Hạ Long, Quảng Ninh",
+    "description": "Kỳ quan thiên nhiên thế giới với hàng nghìn đảo đá và hang động kỳ thú.",
+    "coordinates": [20.910051, 107.183902]
+  },
+  {
+    "name": "Chùa Bái Đính, Ninh Bình",
+    "description": "Ngôi chùa lớn nhất Đông Nam Á, nổi tiếng với nhiều kỷ lục.",
+    "coordinates": [20.251230, 105.927053]
+  },
+  {
+    "name": "Cầu Vàng, Đà Nẵng",
+    "description": "Cầu nổi tiếng với thiết kế hai bàn tay khổng lồ nâng đỡ, tại Bà Nà Hills.",
+    "coordinates": [15.997389, 107.989769]
+  },
+  {
+    "name": "Thánh địa Mỹ Sơn, Quảng Nam",
+    "description": "Khu di tích đền tháp Chăm Pa cổ kính, di sản văn hóa thế giới.",
+    "coordinates": [15.768616, 108.112450]
+  },
+  {
+    "name": "Biển Mỹ Khê, Đà Nẵng",
+    "description": "Bãi biển nổi tiếng với bờ cát trắng mịn và nước biển trong xanh.",
+    "coordinates": [16.059459, 108.249820]
+  },
+  {
+    "name": "Chợ Bến Thành, TP.HCM",
+    "description": "Chợ lâu đời và nổi tiếng, biểu tượng của Thành phố Hồ Chí Minh.",
+    "coordinates": [10.772376, 106.698305]
+  },
+  {
+    "name": "Đồi cát Mũi Né, Bình Thuận",
+    "description": "Khu vực đồi cát vàng nổi tiếng thu hút du khách và nhiếp ảnh gia.",
+    "coordinates": [10.944607, 108.257622]
+  },
+  {
+    "name": "Thác Bản Giốc, Cao Bằng",
+    "description": "Thác nước hùng vĩ nằm ở biên giới Việt - Trung, một trong những thác nước đẹp nhất Việt Nam.",
+    "coordinates": [22.853677, 106.722408]
+  }
+]

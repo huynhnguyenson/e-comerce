@@ -1,0 +1,65 @@
+.product-Buy {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border:1px solid rgb(177, 161, 161);
+    padding: 5px;
+    width: 1000px; // Giới hạn kích thước tối đa của thẻ sản phẩm
+    margin: 0 auto; // Canh giữa
+
+    .product-details {
+        display: grid;
+        grid-template-columns: 150px 1fr 200px 100px 150px 20px; // Thêm cột cho các nút
+        align-items: center; // Căn giữa các phần tử theo chiều dọc
+        grid-gap: 20px; // Khoảng cách giữa các cột
+        padding: 5px 0; // Khoảng cách giữa các phần tử
+
+        .product-image {
+            img {
+                width: 150px;
+                height: 100px; // Giữ tỷ lệ hình ảnh
+                border-radius: 10px;
+                object-fit: cover; // Giúp ảnh không bị méo
+            }
+        }
+
+        .product-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            max-width: 200px; // Chiều rộng tối đa của tên sản phẩm
+            text-align: left; // Căn trái nội dung
+            overflow: hidden; // Ẩn nội dung thừa
+            white-space: normal; // Cho phép xuống dòng
+            word-wrap: break-word; // Ngắt dòng khi từ quá dài
+            color:black;
+
+        }
+
+        .product-description {
+            font-size: 1em;
+            text-align: left;
+            color: #555; // Màu xám cho mô tả
+            overflow: hidden; // Ẩn nội dung thừa
+        }
+
+        .product-quantity {
+            font-size: 1em;
+            color: #090909; // Màu chữ cho tồn kho
+            text-align: left;
+            margin-right: 100px;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: #e83504; // Màu chữ cho giá
+            text-align: right; // Căn phải nội dung
+            padding-right: 20px;
+        }
+        .product-status{
+            color: black;
+            padding-left: 25px;
+
+        }
+       
+    }
+
+}

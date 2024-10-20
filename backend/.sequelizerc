@@ -1,0 +1,9 @@
+//.sequelizerc
+const path = require('path');
+
+module.exports = {
+  'config': path.resolve(__dirname, 'configCLI.js'), // Đặt đường dẫn tới tệp configCLI.js của bạn
+  'models-path': path.resolve(__dirname, 'src/models'), // Đường dẫn tới thư mục chứa các model của bạn
+  'migrations-path': path.resolve(__dirname, 'src/migrations'), // Đường dẫn tới thư mục chứa các migration của bạn
+  'seeders-path': path.resolve(__dirname, 'src/seeders') // Đường dẫn tới thư mục chứa các seeder của bạn
+};

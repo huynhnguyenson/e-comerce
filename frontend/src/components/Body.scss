@@ -1,0 +1,48 @@
+.BodyComponent {
+  height: 100vh;
+  width: 100%;
+  margin-top: 10%;
+  background-color: white;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .ImageBackground {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+
+    // Hiệu ứng mask gradient trắng từ trên xuống
+    mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 2) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 3) 100%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // Hiệu ứng gradient trắng từ trên xuống trên ảnh nền
+      mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      -webkit-mask-image: linear-gradient(to top, rgba(248, 152, 152, 0) 0%, rgb(248, 241, 241) 100%);
+    }
+  }
+
+  .productcartsection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 10%;
+    margin-top: 5%;
+    justify-content: center;
+  }
+
+  .footer-section {
+    footer {
+      width: 100%;
+      flex-shrink: 0;
+    }
+  }
+}

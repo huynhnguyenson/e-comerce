@@ -1,0 +1,56 @@
+version: '3'
+services:
+  # Database service
+  db:
+    image: postgres:14
+    container_name: e-comerce-database
+    environment:
+      POSTGRES_USER: son
+      POSTGRES_PASSWORD: 123456 # Đảm bảo khớp với DB_PASS trong backend
+      POSTGRES_DB: e-comerce-database # Đảm bảo khớp với DB_NAME trong backend
+    ports:
+      - "5435:5432" # DB_PORT 5435 được map sang cổng 5432 của PostgreSQL container
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  # Backend service
+  backend:
+    build:
+      context: ./backend
+    container_name: backend
+    environment:
+      DB_HOST: db # Sử dụng tên dịch vụ, không phải localhost
+      DB_PORT: 5432 # Cổng mặc định cho PostgreSQL trong container
+      DB_USER: son
+      DB_PASS: 123456
+      DB_NAME: e-comerce-database
+      JWT_SECRET: wildways
+      NODE_ENV: production
+    ports:
+      - '5000:5000' # Map cổng 5000 của backend
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  # Frontend service
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - '3001:80' # Map cổng 80 của Nginx (frontend) sang cổng 3001 trên máy host
+    depends_on:
+      - backend # Đảm bảo backend chạy trước frontend
+    networks:
+      - app-network
+
+# Khai báo volume để lưu trữ dữ liệu của PostgreSQL
+volumes:
+  db-data:
+
+    # Khai báo mạng nội bộ để các container giao tiếp với nhau
+networks:
+  app-network:

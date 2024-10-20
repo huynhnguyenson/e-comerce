@@ -1,0 +1,34 @@
+.HomePage {
+    position: absolute;
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+
+    .content {
+        position: absolute; /* có thể thay đổi thành relative nếu không cần phải định vị tuyệt đối */
+        display: flex;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        justify-content: center;
+
+        &::-webkit-scrollbar {
+            display: none; /* Ẩn trên Chrome, Safari và Opera */
+        }
+    }
+}
+
+// Media query cho màn hình di động
+@media (max-width: 768px) {
+    .HomePage {
+        // Thay đổi các thuộc tính cần thiết cho màn hình nhỏ hơn
+        height: auto; // Có thể thay đổi chiều cao nếu cần
+    }
+
+    .content {
+        flex-direction: column; // Sắp xếp theo cột cho màn hình nhỏ
+        align-items: center; // Căn giữa nội dung
+        padding: 10px; // Thêm padding để tránh lề sát cạnh
+    }
+}

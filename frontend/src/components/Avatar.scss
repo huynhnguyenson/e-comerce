@@ -1,0 +1,27 @@
+.Avatar {
+  width: 100%; /* Đảm bảo chiếm toàn bộ kích thước của container cha */
+  height: 100%; /* Đảm bảo chiếm toàn bộ kích thước của container cha */
+  max-width: 100%; /* Giới hạn kích thước tối đa */
+  max-height: 100%; /* Giới hạn kích thước tối đa */
+  border-radius: 50%; /* Để tạo hình tròn */
+  overflow: hidden; /* Ẩn phần ảnh vượt ra ngoài hình tròn */
+  display: flex;
+  justify-content: center; /* Canh giữa nội dung */
+  align-items: center; /* Canh giữa nội dung */
+  border: 2px solid black;
+  .avatar-image {
+    width: 100%; /* Đảm bảo ảnh chiếm toàn bộ kích thước của container */
+    height: 100%; /* Đảm bảo ảnh chiếm toàn bộ kích thước của container */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo mó */
+    display: block; /* Loại bỏ khoảng trắng dưới ảnh */
+  }
+
+  .avatar-placeholder {
+    display: flex;
+    width: 100%; /* Đảm bảo placeholder chiếm toàn bộ kích thước của container */
+    height: 100%; /* Đảm bảo placeholder chiếm toàn bộ kích thước của container */
+    color: #999; /* Màu chữ của placeholder */
+    justify-content: center; /* Canh giữa nội dung */
+    align-items: center; /* Canh giữa nội dung */
+  }
+}

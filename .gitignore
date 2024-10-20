@@ -1,0 +1,20 @@
+# Bỏ qua thư mục node_modules
+node_modules/
+
+# Bỏ qua tệp môi trường trong thư mục backend
+backend/.env
+frontend/.env
+# Bỏ qua các tệp log
+*.log
+
+# Bỏ qua các tệp build và dist
+build/
+dist/
+
+# Bỏ qua các tệp database
+*.sqlite
+*.db
+
+# Docker files and volumes
+docker-compose.override.yml
+db-data/

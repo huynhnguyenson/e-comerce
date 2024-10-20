@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: backend
+    env: docker
+    docker:
+      buildCommand: "docker build -t your-backend-image ."
+      dockerfilePath: ./backend/Dockerfile
+      port: 5000
+    envVars:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: son
+      DB_PASS: 123456
+      DB_NAME: e-comerce-database
+      JWT_SECRET: wildways
+      NODE_ENV: production
+
+  - type: web
+    name: frontend
+    env: docker
+    docker:
+      buildCommand: "docker build -t your-frontend-image ."
+      dockerfilePath: ./frontend/Dockerfile
+      port: 80
+    envVars:
+      API_URL: http://backend:5000 # Cập nhật URL của backend nếu cần
+
+  - type: database
+    name: db
+    env: postgres
+    plan: free
+    postgres:
+      version: "14"
+      user: son
+      password: 123456
+      database: e-comerce-database

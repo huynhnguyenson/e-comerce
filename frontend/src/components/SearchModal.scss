@@ -1,0 +1,107 @@
+$primary-color: #190019; // Màu chính
+$secondary-color: #ff6b81; // Màu phụ
+$modal-background: rgba(255, 255, 255, 0.95); // Nền của modal
+$modal-shadow: rgba(0, 0, 0, 0.2); // Bóng đổ
+$transition-speed: 0.4s; // Tốc độ chuyển động
+$border-radius: 12px; // Độ bo tròn
+
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); // Màu nền mờ
+  display: flex;
+  justify-content: center;
+  align-items: center; // Căn giữa theo chiều dọc
+  z-index: 20;
+  overflow: hidden;
+
+  .modal-content {
+    position: relative;
+    background: $modal-background;
+    border-radius: $border-radius; // Bo tròn cho modal
+    padding: 40px;
+    width: 440px; // Độ rộng của modal
+    box-shadow: 0 10px 30px $modal-shadow; // Bóng đổ mạnh hơn
+    animation: slideIn 0.5s ease-out; // Hiệu ứng xuất hiện
+    transition: transform $transition-speed ease;
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 28px;
+      color: $primary-color;
+      text-align: center;
+      font-weight: bold; // Đậm hơn
+      letter-spacing: 0.5px; // Khoảng cách giữa các chữ
+    }
+
+    .search-input {
+      width: 93%;
+      padding: 15px;
+      border: 2px solid #ccc; // Đường viền dày hơn
+      border-radius: $border-radius; // Bo tròn
+      margin-bottom: 20px;
+      font-size: 16px;
+      transition: border-color $transition-speed, box-shadow $transition-speed;
+
+      &:focus {
+        border-color: $primary-color; // Thay đổi màu khi focus
+        outline: none; // Bỏ viền mặc định
+        box-shadow: 0 0 5px $primary-color; // Hiệu ứng bóng khi focus
+      }
+    }
+
+    .search-button {
+      width: 100%;
+      padding: 15px;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: $border-radius;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color $transition-speed, transform $transition-speed;
+
+      &:hover {
+        background-color: darken($primary-color, 5%); // Tối màu khi hover
+        transform: translateY(-2px); // Nhấc nhẹ lên khi hover
+        box-shadow: 0 5px 15px $modal-shadow; // Bóng đổ cho nút
+      }
+    }
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      font-size: 49px;
+      color: $secondary-color;
+
+      &:hover {
+        color: darken($secondary-color, 10%); // Thay đổi màu khi hover
+      }
+    }
+
+    .loading-message,
+    .error-message {
+      text-align: center;
+      margin-top: 15px;
+      color: $secondary-color;
+      font-style: italic;
+      font-size: 14px; // Kích thước chữ nhỏ hơn
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px); // Bắt đầu từ trên
+    opacity: 0; // Ẩn đi
+  }
+  to {
+    transform: translateY(0); // Xuống vị trí ban đầu
+    opacity: 1; // Hiện ra
+  }
+}
